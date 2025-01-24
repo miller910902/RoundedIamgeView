@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id("maven-publish")
+}
+
+android {
+    namespace 'com.makeramen.roundedimageview'
+    compileSdk 33
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+    }
+    buildTypes {
+        debug {
+        }
+        pretest {}
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.21"
+}
+
+afterEvaluate { project ->
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.makeramen.roundedimageview'
+                artifactId = 'RoundedImageView'
+                version = '1.0'
+            }
+        }
+    }
+}
