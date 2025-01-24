@@ -38,9 +38,9 @@ afterEvaluate { project ->
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.makeramen.roundedimageview'
+                groupId = 'com.github.miller910902'
                 artifactId = 'RoundedImageView'
-                version = '1.0'
+                version = 'v1.2'
             }
         }
     }
