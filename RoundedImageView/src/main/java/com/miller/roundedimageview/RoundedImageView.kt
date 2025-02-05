@@ -1,4 +1,4 @@
-package com.makeramen.roundedimageview
+package com.miller.roundedimageview
 
 import android.content.Context
 import android.content.res.ColorStateList
