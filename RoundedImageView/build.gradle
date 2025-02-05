@@ -40,7 +40,7 @@ afterEvaluate { project ->
                 from components.release
                 groupId = 'com.github.miller910902'
                 artifactId = 'RoundedImageView'
-                version = 'v1.2'
+                version = 'v1.2.1'
             }
         }
     }
