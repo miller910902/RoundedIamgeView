@@ -73,13 +73,13 @@ class RoundedImageView @JvmOverloads constructor(
                         cornerRadiusTopLeftOverride
                     )
                     if (cornerRadiusTopRightOverride != 0f) setTopRightCornerSize(
-                        cornerRadiusTopLeftOverride
+                        cornerRadiusTopRightOverride
                     )
                     if (cornerRadiusBottomLeftOverride != 0f) setBottomLeftCornerSize(
-                        cornerRadiusTopLeftOverride
+                        cornerRadiusBottomLeftOverride
                     )
                     if (cornerRadiusBottomRightOverride != 0f) setBottomRightCornerSize(
-                        cornerRadiusTopLeftOverride
+                        cornerRadiusBottomRightOverride
                     )
                 }
             }
@@ -103,13 +103,13 @@ class RoundedImageView @JvmOverloads constructor(
                 cornerRadiusTopLeftOverride
             )
             if (cornerRadiusTopRightOverride != 0f) setTopRightCornerSize(
-                cornerRadiusTopLeftOverride
+                cornerRadiusTopRightOverride
             )
             if (cornerRadiusBottomLeftOverride != 0f) setBottomLeftCornerSize(
-                cornerRadiusTopLeftOverride
+                cornerRadiusBottomLeftOverride
             )
             if (cornerRadiusBottomRightOverride != 0f) setBottomRightCornerSize(
-                cornerRadiusTopLeftOverride
+                cornerRadiusBottomRightOverride
             )
             if (mBorderWidth != 0f) {
                 strokeWidth = mBorderWidth
