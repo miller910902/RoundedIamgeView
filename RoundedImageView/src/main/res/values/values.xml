@@ -9,5 +9,6 @@
         <attr name="riv_border_width" format="dimension" />
         <attr name="riv_border_color" format="color" />
         <attr name="riv_oval" format="boolean" />
+        <attr name="riv_self" format="boolean" />
     </declare-styleable>
 </resources>

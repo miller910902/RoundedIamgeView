@@ -14,6 +14,7 @@ class RoundedImageView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ShapeableImageView(context, attrs, defStyleAttr) {
 
+    private var isSelfByUser: Boolean=false
     private var cornerFamily: Int = CornerFamily.ROUNDED
     private var mIsOval: Boolean = false
     private var cornerRadiusOverride: Float = 0f
@@ -28,6 +29,7 @@ class RoundedImageView @JvmOverloads constructor(
     init {
         context.obtainStyledAttributes(attrs, R.styleable.RoundedImageView, defStyleAttr, 0).apply {
             mIsOval = getBoolean(R.styleable.RoundedImageView_riv_oval, false)
+            isSelfByUser = getBoolean(R.styleable.RoundedImageView_riv_self, false)
             cornerRadiusOverride =
                 getDimensionPixelSize(R.styleable.RoundedImageView_riv_corner_radius, 0).toFloat()
             cornerRadiusTopLeftOverride = getDimensionPixelSize(
@@ -55,7 +57,7 @@ class RoundedImageView @JvmOverloads constructor(
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
-        setSelfAttr(width)
+        if (!isSelfByUser)setSelfAttr(width)
     }
 
     /**
